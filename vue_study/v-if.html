@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computed</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{bFlag}}</h2>
+        <p>임의 값이 0.5 초과이면 앞면, 이하이면 뒷면</p>
+        <p v-if="bFlag > 0.5">결과 : 앞면</p>
+        <p v-else="bFlag">결과 : 뒷면</p>
+
+
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                bFlag : Math.random()
+            }
+        });
+    </script>
+</body>
+</html>

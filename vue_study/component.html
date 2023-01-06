@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <style>
+    body, input{font-size: 16px; font-weight: bold;}
+  </style>
+</head>
+<body>
+
+
+  <div id="app">
+    <h2>* 컴포넌트 생성</h2>
+    <favorite-fruit></favorite-fruit>
+  </div>
+
+
+  <script>
+    Vue.component('favorite-fruit', {
+      data:function(){
+        return {
+          fruits: [
+            {fruit_name: '사과', fruit_num: 10, fruit_price: '500'},
+            {fruit_name: '배', fruit_num: 20, fruit_price: '700'},
+            {fruit_name: '딸기', fruit_num: 30, fruit_price: '300'}
+          ]
+        }
+      },
+      template:`
+        <div>
+          <ul>
+            <li v-for="item in fruits">
+              *과일이름 : {{item.fruit_name}} <br>
+              *수량 : {{item.fruit_num}} <br>
+              *가격 : {{item.fruit_price}}
+              <hr>
+            </li>
+          </ul>
+        </div>
+      `
+    })
+    
+    new Vue({
+      el: '#app'
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computed</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>반복문을 이용한 값 출력</h2>
+        <hr>
+
+        <ul>
+            <li v-for="item in fruit_list">{{item}}</li>
+        </ul>
+
+        <hr>
+
+        <ul>
+            <li v-for="item2 in fruit_info">가격 : {{item2.fruit_price}}</li>
+        </ul>
+
+        <hr>
+
+        <ul>
+            <li v-for="item2 in fruit_info">이름 : {{item2.fruit_name}}</li>
+        </ul>
+
+        <hr>
+        
+        <ul>
+            <li v-for="item2 in fruit_info">넘버 : {{item2.fruit_num}}</li>
+        </ul>
+
+        <hr>
+
+        <ul>
+            <li v-for="item2 in fruit_info">
+                *과일이름 : {{item2.fruit_name}} <br>
+                *수량 : {{item2.fruit_num}} <br>
+                *가격 : {{item2.fruit_price}}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                fruit_list: ['사과', '배', '딸기'],
+                fruit_info:
+                [   
+                    {fruit_name: '사과', fruit_num: 10, fruit_price: '500'},
+                    {fruit_name: '배', fruit_num: 20, fruit_price: '700'},
+                    {fruit_name: '딸기', fruit_num: 30, fruit_price: '300'}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
