@@ -1,0 +1,12 @@
+* 실습 준비
+1. "login" 폴더 복사
+2. 복사한 폴더에서 vscode 열기
+3. vscode에서 터미널 실행
+4. 웹팩, vuetify, 파이어베이스, vuex, mdi 설치
+> npm install
+> vue add vuetify
+> npm install firebase vuex-persist mdi
+5. "배포" 폴더의 파일로 덮어쓰기
+6. 파이어베이스 인증 프로젝트 생성
+7. datasources > firebase.js 에 코드 복사
+

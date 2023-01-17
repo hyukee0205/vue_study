@@ -1,6 +1,6 @@
 {
-  "name": "사진 갤러리",
-  "short_name": "사진 갤러리",
+  "name": "이메일-구글 인증 로그인",
+  "short_name": "이메일-구글 인증 로그인",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -15,7 +15,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#ffffff"
 }

@@ -58,11 +58,11 @@
   export default {
     data() {
       return {
-       
+        drawer: false
       }
     },
     computed: {
-     
+      
     },
     // 스토어의 로그아웃 기능 사용
     methods: {

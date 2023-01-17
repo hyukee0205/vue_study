@@ -58,15 +58,36 @@
   export default {
     data() {
       return {
-       
+        drawer: false
       }
     },
     computed: {
-     
+      // 스토어에서 현재 인증 상태인지 반환
+      fnGetAuthStatus() {
+        return this.$store.getters.fnGetAuthStatus
+      },
+      // 로그인 여부에 따라 다르게 탐색서랍과 툴바 메뉴명 항목 배열 반환
+      fnGetMenuItems() {
+        if (!this.fnGetAuthStatus) {
+          return [{
+            title: '회원가입',
+            to: '/register',
+            icon: 'mdi-lock-open-outline'
+          }]
+        } else {
+          return [{
+            title: '메인 페이지',
+            to: '/main',
+            icon: 'mdi-account'
+          }]
+        }
+      }
     },
     // 스토어의 로그아웃 기능 사용
     methods: {
-      
+      fnDoLogout() {
+        this.$store.dispatch('fnDoLogout')
+      }
     },
     name: 'App'
   }
